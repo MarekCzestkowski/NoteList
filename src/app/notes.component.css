@@ -1,3 +1,9 @@
+.module {
+  color: red;
+  background-color: pink;
+  font-size: 60px;
+}
+
 .selected {
   background-color: #CFD8DC !important;
   color: white;
