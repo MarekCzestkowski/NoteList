@@ -30,9 +30,10 @@ h4 {
   position: relative;
 }
 .grid {
-  margin: 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  width: 800px;
 }
 .col-1-4 {
   width: 25%;
@@ -43,12 +44,14 @@ h4 {
   color: #eee;
   max-height: 120px;
   min-width: 120px;
-  background-color: #607D8B;
+  background-color: #009900;
+  border-style: inset;
   border-radius: 2px;
 }
 .module:hover {
   background-color: #EEE;
   cursor: pointer;
+  border-style: outset;
   color: #607d8b;
 }
 .grid-pad {
