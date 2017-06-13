@@ -8,7 +8,7 @@
    </div>
      <div>
     <label>contents: </label>
-    <input [(ngModel)]="note.contents" placeholder="contents" />
+    <textarea [(ngModel)]="note.contents" placeholder="contents" ></textarea>
    </div>
   <button (click)="goBack()">Back</button>
   <button (click)="save()">Save</button>
