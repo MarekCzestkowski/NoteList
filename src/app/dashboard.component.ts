@@ -15,6 +15,6 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.noteService.getNotes()
-      .then(notes => this.notes = notes.slice(1, 5));
+      .then(notes => this.notes = notes.slice(0, 5));
   }
 }
