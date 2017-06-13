@@ -1,0 +1,28 @@
+<h2>My Notes</h2>
+<div>
+  <label>Note name:</label> <input #noteName />
+<div>  
+  <label>Contents:</label> <input #contents />
+</div> 
+<div>
+  <button (click)="add(noteName.value,contents.value); noteName.value='';contents.value=''">
+    Add
+  </button>
+  </div>
+</div>
+<ul class="notes">
+  <li *ngFor="let note of notes" (click)="onSelect(note)"
+      [class.selected]="note === selectedNote">
+    <span class="badge">{{note.id}}</span>
+    <span>{{note.name}}</span>
+    <span>{{note.contents}}</span>
+    <button class="delete"
+      (click)="delete(note); $event.stopPropagation()">x</button>
+  </li>
+</ul>
+<div *ngIf="selectedNote">
+  <h2>
+    {{selectedNote.name | uppercase}} is my note
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
