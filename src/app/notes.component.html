@@ -2,8 +2,8 @@
 <div>
   <label>Note name:</label> <input #noteName />
 <div>  
-  <label>Contents:</label> <input #contents />
-</div> 
+  <label>Contents:</label> <textarea #contents></textarea>
+</div>
 <div>
   <button (click)="add(noteName.value,contents.value); noteName.value='';contents.value=''">
     Add
