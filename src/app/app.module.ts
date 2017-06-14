@@ -11,7 +11,7 @@ import { InMemoryDataService }  from './in-memory-data/in-memory-data.service';
 
 import { AppComponent }         from './app.component';
 import { DashboardComponent }   from './dashboard/dashboard.component';
-import { NotesComponent }      from './notes.component';
+import { NotesComponent }      from './notes/notes.component';
 import { NoteDetailComponent }  from './note-detail/note-detail.component';
 import { NoteService }          from './note.service';
 import { NoteSearchComponent }  from './note-search.component';
