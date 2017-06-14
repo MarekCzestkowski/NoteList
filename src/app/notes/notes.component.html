@@ -13,11 +13,10 @@
 <ul class="notes">
   <li *ngFor="let note of notes" (click)="onSelect(note)"
       [class.selected]="note === selectedNote">
-    <span class="badge">{{note.id}}</span>
-    <span>{{note.name}}</span>
-    <span>{{note.contents}}</span>
-    <button class="delete"
-      (click)="delete(note); $event.stopPropagation()">x</button>
+    <div>
+      <span>{{note.name}}</span>
+      <button class="delete" (click)="delete(note); $event.stopPropagation()">X</button><br>
+    </div>
   </li>
 </ul>
 <div *ngIf="selectedNote">
