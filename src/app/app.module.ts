@@ -12,7 +12,7 @@ import { InMemoryDataService }  from './in-memory-data.service';
 import { AppComponent }         from './app.component';
 import { DashboardComponent }   from './dashboard/dashboard.component';
 import { NotesComponent }      from './notes.component';
-import { NoteDetailComponent }  from './note-detail.component';
+import { NoteDetailComponent }  from './note-detail/note-detail.component';
 import { NoteService }          from './note.service';
 import { NoteSearchComponent }  from './note-search.component';
 
