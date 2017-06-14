@@ -12,8 +12,8 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 
-import { NoteSearchService } from './note-search.service';
-import { Note } from './note';
+import { NoteSearchService } from '../services/note-search.service';
+import { Note } from '../services/note';
 
 @Component({
   selector: 'note-search',

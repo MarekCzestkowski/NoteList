@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router }            from '@angular/router';
 
-import { Note }                from '../note';
-import { NoteService }         from '../note.service';
+import { Note }                from '../services/note';
+import { NoteService }         from '../services/note.service';
 
 @Component({
   selector: 'my-notes',
