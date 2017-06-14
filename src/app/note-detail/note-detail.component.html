@@ -1,15 +1,15 @@
 <div *ngIf="note">
-  <h2>{{note.name}} details!</h2>
+  <h2>{{note.name}}</h2>
   <div>
     <label>id: </label>{{note.id}}</div>
-  <div>
-    <label>Nazwa: </label>
-    <input [(ngModel)]="note.name" placeholder="name" />
-   </div>
+    <div>
+      <label>Nazwa:</label>
+      <input [(ngModel)]="note.name" placeholder="name" />
+    </div>
      <div>
-    <label>Zawartość: </label>
-    <textarea [(ngModel)]="note.contents" placeholder="contents" ></textarea>
-   </div>
+      <label>Zawartość:</label> 
+      <textarea [(ngModel)]="note.contents" placeholder="contents" ></textarea>
+    </div>
   <button (click)="goBack()">Wróć</button>
   <button (click)="save()">Zapisz</button>
 </div>
