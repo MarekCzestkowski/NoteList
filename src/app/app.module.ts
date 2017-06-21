@@ -7,14 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './in-memory-data.service';
+import { InMemoryDataService }  from './in-memory-data/in-memory-data.service';
+
 
 import { AppComponent }         from './app.component';
-import { DashboardComponent }   from './dashboard.component';
-import { NotesComponent }      from './notes.component';
-import { NoteDetailComponent }  from './note-detail.component';
-import { NoteService }          from './note.service';
-import { NoteSearchComponent }  from './note-search.component';
+import { DashboardComponent }   from './dashboard/dashboard.component';
+import { NotesComponent }      from './notes/notes.component';
+import { NoteDetailComponent }  from './note-detail/note-detail.component';
+import { NoteService }          from './services/note.service';
+import { RandomNumberService }          from './services/random.service';
 
 @NgModule({
   imports: [
@@ -28,10 +29,9 @@ import { NoteSearchComponent }  from './note-search.component';
     AppComponent,
     DashboardComponent,
     NoteDetailComponent,
-    NotesComponent,
-    NoteSearchComponent
+    NotesComponent
   ],
-  providers: [ NoteService ],
+  providers: [ NoteService, RandomNumberService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -3,8 +3,8 @@ import { Component, OnInit }      from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location }               from '@angular/common';
 
-import { Note }        from './note';
-import { NoteService } from './note.service';
+import { Note }        from '../services/note';
+import { NoteService } from '../services/note.service';
 
 @Component({
   selector: 'note-detail',

@@ -1,0 +1,35 @@
+<h2>Moje notatki</h2>
+<div *ngIf="randomNumber">
+  <h1>My random number is {{randomNumber}}</h1>
+</div>
+<div>
+  <label>Nazwa:</label> <input #noteName />
+<div>  
+<div>
+  <label>autor:</label> <input #autor />
+<div>  
+  <label>Zawartość:</label> <textarea #contents></textarea>
+</div>
+<div>
+  <button (click)="add(noteName.value,contents.value, autor.value);autor.value='';noteName.value='';contents.value=''">
+    Dodaj
+  </button>
+  </div>
+</div>
+<ul class="notes">
+  <li *ngFor="let note of notes" (click)="onSelect(note)"
+      [class.selected]="note === selectedNote">
+    <div>
+      <span>{{note.name}}</span>
+      <button class="delete" (click)="delete(note); $event.stopPropagation()">X</button><br>
+    </div>
+  </li>
+</ul>
+<div *ngIf="selectedNote">
+  <h2>
+    {{selectedNote.name | uppercase}} - nazwa notatki
+  </h2>
+  <p>autor : {{selectedNote.autor}}</p>
+  <button (click)="gotoDetail()">Zobacz więcej</button>
+</div>
+

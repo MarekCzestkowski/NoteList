@@ -4,9 +4,10 @@ import { Component }          from '@angular/core';
   selector: 'app-root',
   template: `
     <h1>{{title}}</h1>
+    
     <nav>
-      <a routerLink="/dashboard" routerLinkActive="active">Szukaj notatki </a>
-      <a routerLink="/notes" routerLinkActive="active">Notatki</a>
+      <a routerLink="/dashboard" routerLinkActive="active">Ostatnie notatki</a>
+      <a routerLink="/notes" routerLinkActive="active">Wszystkie notatki</a>
     </nav>
     <router-outlet></router-outlet>
   `,

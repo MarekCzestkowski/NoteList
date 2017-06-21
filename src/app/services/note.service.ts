@@ -37,9 +37,9 @@ export class NoteService {
       .catch(this.handleError);
   }
 
-  create(name: string, contents:string): Promise<Note> {
+  create(name: string, contents:string, autor:string): Promise<Note> {
     return this.http
-      .post(this.notesUrl, JSON.stringify({name: name,contents:contents}), {headers: this.headers})
+      .post(this.notesUrl, JSON.stringify({name: name,autor:autor, contents:contents}), {headers: this.headers})
       .toPromise()
       .then(res => res.json().data as Note)
       .catch(this.handleError);

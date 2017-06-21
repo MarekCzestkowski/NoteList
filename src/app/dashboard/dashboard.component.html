@@ -3,7 +3,7 @@
   <a *ngFor="let note of notes"  [routerLink]="['/detail', note.id]"  class="col-1-8">
     <div class="module note">
       <h4>{{note.name}}</h4>
+	  <p>{{randomNumber}}</p>
     </div>
   </a>
 </div>
-<note-search></note-search>
